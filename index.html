@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08090f" />
+    <title>Jora 2 — Your work, in orbit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Jora home"><span class="brand-mark">J</span><span>jora</span><sup>2</sup></a>
+        <div class="nav-links"><a class="active" href="#top">Overview</a><a href="#spaces">Spaces</a><a href="#activity">Activity</a></div>
+        <div class="nav-right"><button class="search" aria-label="Search"><span>⌘ K</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button><button class="avatar" aria-label="Profile">AS</button></div>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="eyebrow"><i></i> Tuesday, September 5</div>
+        <p class="kicker">Good morning, Alessia</p>
+        <h1>Make room for<br/><em>what matters.</em></h1>
+        <p class="intro">Your day is in orbit. Three things need your attention, and the rest can wait.</p>
+        <div class="hero-actions"><button class="primary" id="focusButton">Start a focus session <span>↗</span></button><button class="text-button" id="briefButton">View daily brief <span>↓</span></button></div>
+        <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </section>
+
+      <section class="dash-grid" id="spaces">
+        <article class="card priority-card">
+          <div class="card-title"><div><p class="label">Today’s priority</p><h2>Ship the calm.</h2></div><button class="dots" aria-label="More priority options">•••</button></div>
+          <p class="priority-copy">Finish the launch narrative before the afternoon sync. Keep it clear, keep it human.</p>
+          <div class="progress-row"><span>Launch narrative</span><strong>72%</strong></div><div class="track"><span></span></div>
+          <div class="priority-footer"><div class="faces"><b>AM</b><b>LN</b><b>YO</b></div><span>3 collaborators</span><button class="round-arrow" aria-label="Open launch narrative">↗</button></div>
+        </article>
+
+        <article class="card orbit-card">
+          <div class="card-title"><div><p class="label">Your orbit</p><h2>At a glance.</h2></div><span class="live">LIVE</span></div>
+          <div class="orbit-content"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="sun">24<span>pts</span></div><div class="planet p1"></div><div class="planet p2"></div><div class="planet p3"></div></div>
+          <div class="orbit-key"><span><i class="key-a"></i>Deep work <b>3h 20m</b></span><span><i class="key-b"></i>Meetings <b>2h</b></span></div>
+        </article>
+
+        <article class="card feed-card" id="activity">
+          <div class="card-title"><div><p class="label">Signals</p><h2>Worth a look.</h2></div><a href="#activity">See all <span>→</span></a></div>
+          <ul class="signals">
+            <li><span class="signal-icon violet">✦</span><p><b>Alex</b> left a thought on <em>Launch narrative</em><small>12 min ago</small></p><button aria-label="Open Alex's comment">→</button></li>
+            <li><span class="signal-icon gold">◒</span><p><b>Design system</b> is ready for review<small>38 min ago</small></p><button aria-label="Open design system">→</button></li>
+            <li><span class="signal-icon sky">↗</span><p>You cleared <b>7 tasks</b> yesterday<small>Yesterday</small></p><button aria-label="Open cleared tasks">→</button></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="moment"><div><p class="label">A small moment</p><h2>“The key is not to prioritize<br/>what’s on your schedule,<br/><em>but to schedule your priorities.”</em></h2></div><p class="author">— Stephen R. Covey</p></section>
+    </main>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
