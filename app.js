@@ -1,8 +1,14 @@
 const toast = document.querySelector(".toast");
 let toastTimer;
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function notify(message) {
   if (!toast) return;
+  // Clear first so repeated identical messages still announce via aria-live.
+  toast.textContent = "";
+  toast.classList.remove("show");
+  // Force a reflow so the live region registers a fresh update.
+  void toast.offsetWidth;
   toast.textContent = message;
   toast.classList.add("show");
   clearTimeout(toastTimer);
@@ -31,7 +37,9 @@ focusButton?.addEventListener("click", () => {
 });
 
 briefButton?.addEventListener("click", () => {
-  document.querySelector("#spaces")?.scrollIntoView({ behavior: "smooth" });
+  document.querySelector("#spaces")?.scrollIntoView({
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+  });
 });
 
 searchButton?.addEventListener("click", () => {
