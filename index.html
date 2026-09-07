@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1214" />
+    <meta
+      name="description"
+      content="Jora 2 keeps your day in orbit — priorities, focus, and signals in one calm workspace."
+    />
+    <title>Jora 2 — Your work, in orbit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <main class="shell">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Jora 2 home">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span class="brand-name">jora</span>
+          <sup>2</sup>
+        </a>
+        <div class="nav-links">
+          <a class="active" href="#top">Overview</a>
+          <a href="#spaces">Spaces</a>
+          <a href="#activity">Activity</a>
+        </div>
+        <div class="nav-right">
+          <button class="search" type="button" aria-label="Search workspace">
+            <span>⌘ K</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" />
+              <path d="m16 16 4 4" />
+            </svg>
+          </button>
+          <button class="avatar" type="button" aria-label="Profile">AS</button>
+        </div>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i> <span id="todayLabel">Monday, September 7</span></p>
+          <p class="kicker">Good morning, Alessia</p>
+          <h1>Make room for<br /><em>what matters.</em></h1>
+          <p class="intro">
+            Your day is in orbit. Three things need your attention, and the rest can wait.
+          </p>
+          <div class="hero-actions">
+            <button class="primary" id="focusButton" type="button">
+              Start a focus session <span aria-hidden="true">↗</span>
+            </button>
+            <button class="text-button" id="briefButton" type="button">
+              View daily brief <span aria-hidden="true">↓</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit ring-outer"></div>
+          <div class="orbit ring-mid"></div>
+          <div class="orbit ring-inner"></div>
+          <div class="planet core"></div>
+          <div class="planet mote mote-a"></div>
+          <div class="planet mote mote-b"></div>
+          <div class="planet mote mote-c"></div>
+        </div>
+      </section>
+
+      <section class="dash-grid" id="spaces" aria-label="Workspace spaces">
+        <article class="panel priority-panel">
+          <div class="panel-title">
+            <div>
+              <p class="label">Today’s priority</p>
+              <h2>Ship the calm.</h2>
+            </div>
+            <button class="dots" type="button" aria-label="More priority options">•••</button>
+          </div>
+          <p class="priority-copy">
+            Finish the launch narrative before the afternoon sync. Keep it clear, keep it human.
+          </p>
+          <div class="progress-row">
+            <span>Launch narrative</span>
+            <strong>72%</strong>
+          </div>
+          <div class="track" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+            <span></span>
+          </div>
+          <div class="priority-footer">
+            <div class="faces" aria-hidden="true"><b>AM</b><b>LN</b><b>YO</b></div>
+            <span>3 collaborators</span>
+            <button class="round-arrow" type="button" aria-label="Open launch narrative">↗</button>
+          </div>
+        </article>
+
+        <article class="panel orbit-panel">
+          <div class="panel-title">
+            <div>
+              <p class="label">Your orbit</p>
+              <h2>At a glance.</h2>
+            </div>
+            <span class="live">LIVE</span>
+          </div>
+          <div class="orbit-content" aria-hidden="true">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+            <div class="sun">24<span>pts</span></div>
+            <div class="dot d1"></div>
+            <div class="dot d2"></div>
+            <div class="dot d3"></div>
+          </div>
+          <div class="orbit-key">
+            <span><i class="key-a"></i>Deep work <b>3h 20m</b></span>
+            <span><i class="key-b"></i>Meetings <b>2h</b></span>
+          </div>
+        </article>
+
+        <article class="panel feed-panel" id="activity">
+          <div class="panel-title">
+            <div>
+              <p class="label">Signals</p>
+              <h2>Worth a look.</h2>
+            </div>
+            <a class="see-all" href="#activity">See all <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="signals">
+            <li>
+              <span class="signal-icon jade" aria-hidden="true">✦</span>
+              <p>
+                <b>Alex</b> left a thought on <em>Launch narrative</em>
+                <small>12 min ago</small>
+              </p>
+              <button type="button" aria-label="Open Alex's comment">→</button>
+            </li>
+            <li>
+              <span class="signal-icon sand" aria-hidden="true">◒</span>
+              <p>
+                <b>Design system</b> is ready for review
+                <small>38 min ago</small>
+              </p>
+              <button type="button" aria-label="Open design system">→</button>
+            </li>
+            <li>
+              <span class="signal-icon sky" aria-hidden="true">↗</span>
+              <p>
+                You cleared <b>7 tasks</b> yesterday
+                <small>Yesterday</small>
+              </p>
+              <button type="button" aria-label="Open cleared tasks">→</button>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="moment">
+        <div>
+          <p class="label">A small moment</p>
+          <h2>
+            “The key is not to prioritize<br />
+            what’s on your schedule,<br />
+            <em>but to schedule your priorities.”</em>
+          </h2>
+        </div>
+        <p class="author">— Stephen R. Covey</p>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
